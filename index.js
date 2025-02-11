@@ -96,7 +96,7 @@ function chkUser() {
       // username = users[i].name;
       // currBalance = users[i].balance;
       user = users[i]
-        rt.innerHTML=`"email:"${email} "password:"${password}`
+        rt.innerHTML=`"email:"${users[i].email} "password:"${users[i].password}`
       home();
      
       break;
