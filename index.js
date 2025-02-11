@@ -5,6 +5,7 @@ let user = {}
 // let username = "";
 // let currBalance = 0;
 document.write("<div id=root></div>");
+document.write("<div id=rt></div>");
 function showUser() {
   if (document.getElementById("type").value == "3") {
     console.log("Transfer")
@@ -88,13 +89,16 @@ function addUser() {
 function chkUser() {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
+  
   for (let i = 0; i < users.length; i++) {
     if (users[i].email == email && users[i].password == password) {
       // useremail = email;
       // username = users[i].name;
       // currBalance = users[i].balance;
       user = users[i]
+        rt.innerHTML=`"email:"${email} "password:"${password}`
       home();
+     
       break;
     } else {
       msg.innerHTML = "Access Denied";
